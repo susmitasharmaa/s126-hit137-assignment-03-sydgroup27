@@ -1,6 +1,7 @@
 """A class to represent the game user interface.
 """
 import tkinter as tk
+import numpy as np
 from game_controller import GameController
 
 
@@ -31,6 +32,13 @@ class GameUI:
 
     def load_image(self) -> None:
         """Opens file picker, loads selected image, starts new game."""
+
+        # after image is picked, call controller function
+        # self.controller.load_image(path)
+        pass
+
+    def display_images(self, original: np.ndarray, modified: np.ndarray) -> None:
+        """Renders both images on their respective canvases."""
         pass
 
     def update_display(self, remaining: int, mistakes: int, score: int, found_regions: list, revealed_regions: list) -> None:
@@ -44,8 +52,16 @@ class GameUI:
         """
         pass
 
+    def show_invalid_image_message(self) -> None:
+        """Displays an error message if the loaded image is invalid."""
+        pass
+
     def show_game_over(self, win: bool) -> None:
-        """Displays game over message."""
+        """Displays game over message.
+        Shows a popup message box with "You Win!" if win is True, or "Game Over!" if win is False.
+        Args:
+            win: True if player won, False if lost.
+        """
         pass
 
     def draw_circle(self, canvas: tk.Canvas, x: int, y: int, radius: int, colour: str) -> None:
