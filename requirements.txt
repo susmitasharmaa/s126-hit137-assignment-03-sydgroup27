@@ -1,0 +1,9 @@
+# requirements.txt includes all the required packages for the project
+
+torch
+transformers
+pillow
+requests
+
+diffusers
+# tkinter is a built-in package (kept for reference)
